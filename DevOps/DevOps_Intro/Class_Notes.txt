@@ -288,3 +288,160 @@ Next :::
 			- Continuous Delivery / Deployment
 			
 			- Continuous Monitoring
+
+
+
+		
+######################
+Day 2 - 2nd June 2026
+######################	
+	
+		- Continuous Delivery / Deployment :::
+		
+			- Both the Continuous Delivery/Deployment are related to Production Release.
+		
+
+			- Continuous Delivery: 
+			
+				-> This process expect manual intervension/approval for production releases 
+				-> During the process of application upgrade or downgrade, there might be application downtime
+				-> This is used for Monolith Application Architecture
+
+				
+				Eg.: Legacy Applications:
+				
+					Core Banking Sectors - Online Banking! 
+					
+						- Deployment/Release Window ::: -> 4 - 6 Hrs.
+							- Prod Level Testing 
+								- Fix / Revert
+
+		
+			- Continuous Deployment:
+			
+				- It is the process to release the changes to production environment, without any manual intervension/Approvals..
+				- During the process of application upgrade or downgrade, there is no downtime
+				- Zero Downtime can be achieved only with the Micro-Service based Application Architecture.
+				- Is the matured level of DevOps.
+				
+				
+				Eg.: E_Commerce - www.amazon.com / Netflix / Facebook
+				
+				www.amazon.com ==> Functions/Modules - Micro-Service::
+				
+				- Sign-Up 		-> Micro-Service1	--> Developer1 -> Code,UTest,- CI - QA/UAT --> Release to Prod
+				
+				- Sign-In		-> Micro-Service2
+				
+				- Search 
+				
+				- Add to Cart 
+				
+				- Place the Order 
+				
+				- Make Payment 
+				
+				- Confirm 
+				
+				- Tracker
+				
+		
+			- Tools :::
+			
+				- Jenkins / Azure Pipelines 
+				- Kubernetes / Ansible
+			
+		
+		- Continuous Monitoring :::
+		
+			- To ensure business continuity.
+			- To ensure that the application and the Infra-Structure are up and running!
+			
+			Infra-Structure Monitoring :::
+			
+				- Production Servers / Database / Network / Storage 
+					
+				Tools: 
+				
+					- Prometheus / Grafana / Dynatrace / Nagios / Splunk
+					- Alert Management
+						75% as a threshold limit
+			
+			Application Monitoring :::
+			
+				- Micro-Services --> Database calls
+					
+				Tools :
+				
+					- AppDynamics / DataDog
+			
+			
+		
+		Infra-Structure Management:
+		
+			- IAC - Infra-Structure As Code - Tools
+		
+			Infra-Structure Provisioning/Creating 	::: Terraform/CloudFormation/ARM
+			
+			Infra-Structure Configurations 			::: Ansible/Chef/Puppet
+			
+			
+	
+	- DevOps Tools :::
+	
+		- Open-Source :::
+			- git,github,jenkins,docker,kubernetes,ansible,terraform,prometheus,grafana
+		
+		
+		- Managed Services 
+		
+			- AWS 		-> CodeCommit,CodeBuild, Codedeploy, CodePipelines
+			
+			- Azure 	-> Azure DevOps Services 
+			
+			- GCP 		-> DevOps Server 
+			
+			
+	- Details DevOps assessment :
+	
+	
+	- DevOps Workflow LifeCycle ::: CI/CD :
+	
+	
+		Developers Create Source Code 
+		
+		Save it to Source Code Repository(GitHub)
+		
+		SCM_Checkout	-> Process to download the code to Build Environment
+		
+		Build 
+		
+		Create Artifacts 
+		
+		Perform Unit Testing 
+		
+		Promote to Test Environment
+		
+		Automate Testing 
+		
+		Promote to Production Environment
+		
+		Prod Testing / LIVE 
+		
+		Monitoring - Feedback 
+		
+		
+
+
+		- DevOps is a Software Development Strategy/Process, which helps to promote the collaboration between the teams like Development Team and the Operations Team to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in a more automated fashion.
+		
+		
+	- DevOps is all about :
+	
+		- People 
+		
+		- Process 
+		
+		- Tool 
+		
+		
