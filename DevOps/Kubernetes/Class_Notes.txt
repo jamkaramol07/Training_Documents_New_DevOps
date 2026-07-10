@@ -1,3 +1,4 @@
+		
 #########################
 Day 23 - 9th July 2026
 #########################
@@ -155,3 +156,54 @@ Next :::
 			Kubernetes_WorkerNode2  (VM)
 			
 	- Minikube/K3s/Kind			# Single node Cluster
+	
+	
+#########################
+Day 24 - 10th July 2026
+#########################
+
+
+
+
+	- Managed Kubernetes Services :	
+	
+		AWS 	: EKS,ECS,ECR 
+		
+		Azure 	: AKS,ACS,ACR
+		
+		GCP 	: GCE,GCE,GCR
+		
+
+
+	- Setup Kubernetes Architecture using Kubeadm
+	
+	- Kubernetes_Master:	(VM)					# Control Plane
+			Kubernetes_WorkerNode1 (VM)
+			Kubernetes_WorkerNode2  (VM)
+
+		Kubernetes Master and Worker Node Configurations :::
+
+			Installation of Kubernetes using Kubeadm :::	
+			
+					1. Launch 3 VMs on AWS Cloud (Ubuntu v24.04) --> (1 Master Node, 2 WorkerNodes)
+				
+				In all the Nodes(i.e., Master Node and WorkerNodes):
+				
+					2. Allow all traffic for all the nodes - just for this demo
+					3. Change the HostName of all the Nodes
+					4. Disable swap configuration in all the nodes
+					5. Install Docker in all the nodes *** (Optional)
+					6. Install CRI - 'Container-D' in all the nodes
+					7. Install Kubeadm,kubelet,kubectl 
+					8. Enable Kubelet	
+				   
+				Only on Master Node:
+				
+					9. Execute Kubeadm Init Command 		# To initialize Kubernetes Master Node
+					10. Enable user Access to Kubernetes
+					11. Install flannel Network plugins for kubeproxy
+
+				Only on WorkerNodes:		
+				
+					12. Execute Kubeadm Join Command 		# To attach the Worknodes with Kubernetes Master Node.
+		
